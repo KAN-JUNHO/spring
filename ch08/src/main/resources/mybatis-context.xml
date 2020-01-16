@@ -5,6 +5,7 @@
 <configuration>  
   <mappers>
     <mapper resource="./mapper/sql.xml"/>
+	<mapper resource="./mapper/sql_member.xml"/>
   </mappers>
 </configuration> 
   

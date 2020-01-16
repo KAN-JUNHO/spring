@@ -12,7 +12,7 @@
 	
 	
 	<select id="SELECT_USERS" resultType="kr.co.ch08.vo.UserVO">
-		SELECT * FROM `BASIC_USER3`;
+		SELECT * FROM `USER3`;
 	</select>
 	
 	<select id="SELECT_USER" resultType="kr.co.ch08.vo.UserVO">

@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h3>My batis 실습</h3>
-	<a href="/ch08/user/list">list</a>
-	<a href="/ch08/user/register">register</a>
+	<a href="/ch08/member/list">list</a>
+	<a href="/ch08/member/register">register</a>
 </body>
 </html>
