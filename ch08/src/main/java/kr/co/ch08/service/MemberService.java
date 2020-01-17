@@ -15,15 +15,18 @@ public class MemberService {
 	private MemberDAO dao;
 	
 	public void insertMember(MemberVO vo) {
-		
+		dao.insertMember(vo);
 	}
-	public List<MemberVO> selectMembers() {
-		return dao.selectMembers();
-	}	
 	
 	public MemberVO selectMember(String uid) {
 		return dao.selectMember(uid);
 	}
+	
+	public List<MemberVO> selectMembers() {
+		return dao.selectMembers();
+	}	
+	
+
 
 	public void updateMember(MemberVO vo) {
 		dao.updateMember(vo);

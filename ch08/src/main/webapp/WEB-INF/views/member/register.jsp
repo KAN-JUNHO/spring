@@ -27,12 +27,8 @@
 				<td><input type="text" name="pos"></td>
 			</tr>
 			<tr>
-				<td>직급</td>
+				<td>부서번호</td>
 				<td><input type="text" name="dep"></td>
-			</tr>
-			<tr>
-				<td>직급</td>
-				<td><input type="text" name="rdate"></td>
 			</tr>
 			
 			<tr>
@@ -40,5 +36,6 @@
 			</tr>
 		</table>
 	</form>
+		<a href="/ch08/member/list">직원목록</a>
 </body>
 </html>

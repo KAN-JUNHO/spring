@@ -1,11 +1,12 @@
 package kr.co.ch08.vo;
 
 public class MemberVO {
+	
 	private String uid;
 	private String name;
 	private String hp;
 	private String pos;
-	private int dep;
+	private String dep;
 	private String rdate;
 	
 	public String getUid() {
@@ -32,10 +33,10 @@ public class MemberVO {
 	public void setPos(String pos) {
 		this.pos = pos;
 	}
-	public int getDep() {
+	public String getDep() {
 		return dep;
 	}
-	public void setDep(int dep) {
+	public void setDep(String dep) {
 		this.dep = dep;
 	}
 	public String getRdate() {
@@ -44,6 +45,6 @@ public class MemberVO {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-	
-	
 }
+	
+	

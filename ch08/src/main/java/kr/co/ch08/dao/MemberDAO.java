@@ -14,21 +14,22 @@ import kr.co.ch08.vo.MemberVO;
 public class MemberDAO {
 	
 	@Inject
-	private JdbcTemplate jdbc;
+	private JdbcTemplate jdbcTemplate;
 	
 	@Inject
 	private SqlSessionTemplate mybatis;
 	
 	
-	public void insertMember(MemberDAO vo) {
+	public void insertMember(MemberVO vo) {
 		mybatis.insert("mapper.sql_member.INSERT_MEMBER",vo);
-	}
-	public List<MemberVO> selectMembers(){
-		return mybatis.selectList("mapper.sql_member.SELECT_MEMBERS");	
 	}
 	public MemberVO selectMember(String uid) {
 		return mybatis.selectOne("mapper.sql_member.SELECT_MEMBER", uid);
 	}
+	public List<MemberVO> selectMembers(){
+		return mybatis.selectList("mapper.sql_member.SELECT_MEMBERS");	
+	}
+
 	
 	public void updateMember(MemberVO vo) {
 		mybatis.update("mapper.sql_member.UPDATE_MEMBER", vo);

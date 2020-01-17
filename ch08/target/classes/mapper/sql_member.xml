@@ -4,12 +4,12 @@
 	
 	<insert id="INSERT_MEMBER">
 		INSERT INTO `MEMBER` SET 
-		`uid`=#{uid}, 
-		`name`=#{name}, 
-		`hp`=#{hp}, 
-		`pos`=#{pos};
-		`dep`=#{dep};
-		`rdate`=#{rdate};
+		`uid`=#{uid},
+		`name`=#{name},
+		`hp`=#{hp},
+		`pos`=#{pos},
+		`dep`=#{dep},
+		`rdate`=NOW();		
 	</insert>
 	
 	
@@ -22,13 +22,11 @@
 	</select>
 	
 	<update id="UPDATE_MEMBER">
-		UPDATE `MEMBER` SET		
-		`uid`=#{uid}, 
+		UPDATE `MEMBER` SET
 		`name`=#{name}, 
 		`hp`=#{hp}, 
-		`pos`=#{pos};
-		`dep`=#{dep};
-		`rdate`=#{rdate};
+		`pos`=#{pos},
+		`dep`=#{dep}
 		WHERE `uid`=#{uid};		
 	</update>
 	

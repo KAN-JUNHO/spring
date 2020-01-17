@@ -4,35 +4,40 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>list</title>
 </head>
 <body>
-	<h3>MEMBER 목록</h3>
+	<h3>Member 목록</h3>
+
 	<table border="1">
 		<tr>
-			<td>아이디</td>
-			<td>이름</td>
-			<td>휴대폰</td>
-			<td>직급</td>
-			<td>부서</td>
-			<td>날짜</td>
-			<td>설정</td>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>휴대폰</th>
+			<th>직급</th>
+			<th>부서</th>
+			<th>입사일</th>
+			<th>설정</th>		
 		</tr>
-		<c:forEach  var="member" items="${members}">
+
+		<c:forEach var="member" items="${members}">
 			<tr>
 				<td>${member.uid}</td>
 				<td>${member.name}</td>
 				<td>${member.hp}</td>
 				<td>${member.pos}</td>
 				<td>${member.dep}</td>
-				<td>${member.rdate}</td>
-				<th>
+				<td>${member.rdate.substring(2, 10)}</td>
+				<td>
 					<a href="/ch08/member/modify?uid=${member.uid}">수정</a>
 					<a href="/ch08/member/delete?uid=${member.uid}">삭제</a>
-				<th>
+				</td>
 			</tr>
 		</c:forEach>
+
 	</table>
-	<a href="/ch08/member/register">등록하기</a>
+
+	<a href="/ch08/member/register">등록하기</a>		
+
 </body>
-</html>
+</html> 
