@@ -1,14 +1,15 @@
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>회원가입</title>
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="/sboard/css/style.css" />
 	</head>
 	<body>
 		<div id="member">
 			<section class="register">
-				<form action="#" method="POST">
+				<form action="/sboard/member/register" method="POST">
 					<section>
 						<table>
 							<caption>사이트 이용정보 입력</caption>

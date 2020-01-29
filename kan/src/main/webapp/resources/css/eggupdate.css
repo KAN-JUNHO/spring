@@ -1,0 +1,39 @@
+[class|="sect"][class*="chart"] .score .percent span {
+    vertical-align: initial;
+}
+[class|="sect"][class*="chart"] .score .percent span {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+}
+[class|="sect"][class*="chart"] .score .egg-gage {
+    margin-top: -10px;
+    margin-left: 2px;
+    padding-left: 6px;
+    background: url(../images/common/bg/bg_writeinfo.gif) 0 12px no-repeat;
+}
+.egg-gage {
+    display: inline-block;
+    width: auto !important;
+    line-height: 1;
+}
+.egg-gage.small .egg {
+    display: inline-block;
+    margin-right: 2px;
+    width: 18px;
+    height: 26px;
+    background: url(../images/sprite/sprite_egg.png) no-repeat 0 -47px;
+    vertical-align: middle;
+}
+.egg-gage.small .egg.great {
+    width: 16px;
+    background-position: -41px -47px;
+}
+.egg-gage.small .percent {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: 'verdana';
+    font-size: 12px;
+    color: #000000;
+    vertical-align: middle;
+}

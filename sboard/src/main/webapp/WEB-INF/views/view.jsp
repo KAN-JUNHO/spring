@@ -1,4 +1,5 @@
-<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,52 +15,59 @@
 					<table>
 						<tr>
 							<td>제목</td>
-							<td><input type="text" name="subject" value="테스트 제목 입니다." readonly />
+							<td><input type="text" name="subject" value="${boardArticleVo.title}" readonly />
 							</td>
 						</tr>
 						
-						<tr>
-							<td>첨부파일</td>
-							<td>
-								<a href="#">테스트.hwp</a>
-								<span>3회 다운로드</span>
-							</td>
-						</tr>
+						<c:if test="${boardArticleVo.file == 1}">
+							<tr>
+								<td>첨부파일</td>
+								<td>
+									<a href="#">테스트.hwp</a>
+									<span>3회 다운로드</span>
+								</td>
+							</tr>
+						</c:if>
 						
 						<tr>
 							<td>내용</td>
 							<td>
-								<textarea name="content" rows="20" readonly>테스트 내용 입니다.</textarea>
+								<textarea name="content" rows="20" readonly>${boardArticleVo.content}</textarea>
 							</td>
 						</tr>
 					</table>
 					<div class="btns">
 						<a href="#" class="cancel del">삭제</a>
-						<a href="#" class="cancel mod">수정</a>
-						<a href="#" class="cancel">목록</a>
+						<a href="/sboard/modify?seq=${boardArticleVo.seq}" class="cancel mod">수정</a>
+						<a href="/sboard/list" class="cancel">목록</a>
 					</div>
 				</form>
-			</div><!-- view 끝 -->
+			</div>
+			<!-- view 끝 -->
 			
 			<!-- 댓글리스트 -->
 			<section class="comments">
 				<h3>댓글목록</h3>
 				
-				<div class="comment">
-					<span>
-						<span>홍길동</span>
-						<span>18-03-01</span>
-					</span>
-					<textarea>테스트 댓글입니다.</textarea>
-					<div>
-						<a href="#" class="del">삭제</a>
-						<a href="#" class="mod">수정</a>
+				<c:forEach var="vo" items="${comments}">
+					<div class="comment">
+						<span>
+							<span>${vo.uid }</span>
+							<span>vo.rdate.substring(2,10)</span>
+						</span>
+						<textarea>테스트 ${vo.content}</textarea>
+						<div>
+							<a href="#" class="del">삭제</a>
+							<a href="" class="mod">수정</a>
+						</div>
 					</div>
-				</div>
-			
-				<p class="empty">
-					등록된 댓글이 없습니다.
-				</p>
+				</c:forEach>
+				
+				<c:if test="${empty comments}">
+					<p class="empty">
+						등록된 댓글이 없습니다.
+					</p>
+				</c:if>
 				
 			</section>
 			
@@ -67,7 +75,8 @@
 			<section class="comment_write">
 				<h3>댓글쓰기</h3>
 				<div>
-					<form action="#" method="post">
+					<form action="/sboard/comment/write" method="post">
+						<input type="hidden" name="parent" value="${boardArticleVo.seq}" />
 						<textarea name="comment" rows="5"></textarea>
 						<div class="btns">
 							<a href="#" class="cancel">취소</a>

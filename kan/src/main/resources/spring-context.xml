@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+
+	<context:component-scan base-package="kr.co.kan"></context:component-scan>
+	
+	<!-- ViewResolver 설정 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/"/>
+		<property name="suffix" value=".jsp"/>	
+	</bean>
+	
+	<!-- Resources 경로 설정 -->
+	<mvc:annotation-driven></mvc:annotation-driven>
+	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
+	<mvc:resources location="/resources/css/" mapping="/css/**"></mvc:resources>
+	<mvc:resources location="/resources/Front" mapping="/Front/**"></mvc:resources>
+	<mvc:resources location="/resources/Front/Main" mapping="/Main/**"></mvc:resources>
+	<mvc:resources location="/resources/Front/Main/2019/1104" mapping="/1104/**"></mvc:resources>
+	<mvc:resources location="/resources/Front/Main/2019/1118" mapping="/1118/**"></mvc:resources>
+	<mvc:resources location="/resources/Front/Main/2019/1219" mapping="/1219/**"></mvc:resources>
+	<mvc:resources location="/resources/Front/Main/2019/1223" mapping="/1223/**"></mvc:resources>
+	<mvc:resources location="/resources/Front/Main/2019/1224" mapping="/1224/**"></mvc:resources>
+	<mvc:resources location="/resources/images/" mapping="/images/**"></mvc:resources>
+	<mvc:resources location="/resources/images/201709/house" mapping="/house/**"></mvc:resources>
+	<mvc:resources location="/resources/images/banner" mapping="/banner/**"></mvc:resources>
+	<mvc:resources location="/resources/images/banner/main" mapping="/main/**"></mvc:resources>
+	<mvc:resources location="/resources/images/common/bg" mapping="/bg/**"></mvc:resources>
+	<mvc:resources location="/resources/images/common/btn" mapping="/btn/**"></mvc:resources>
+	<mvc:resources location="/resources/images/common/ico" mapping="/ico/**"></mvc:resources>
+	<mvc:resources location="/resources/images/main" mapping="/main/**"></mvc:resources>
+	<mvc:resources location="/resources/popup/1606_iexp" mapping="/1606_iexp/**"></mvc:resources>
+	<mvc:resources location="/resources/sprite" mapping="/sprite/**"></mvc:resources>
+	<mvc:resources location="/resources/title" mapping="/title/**"></mvc:resources>
+	<mvc:resources location="/resources/js/" mapping="/js/**"></mvc:resources>
+
+	
+	<!-- dataSource 설정(DBCP 설정) -->
+	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://192.168.44.7:3306/pjh"/>
+		<property name="username" value="pjh"/>
+		<property name="password" value="1234"/>
+	</bean>
+	
+	<!-- Spring JDBC 등록 -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource" ref="dataSource"/>	
+	</bean>
+	
+	<!-- Mybatis 설정 -->
+	<bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:mybatis-context.xml"></property>		
+	</bean>
+	
+	<!-- Mybatis-Spring 설정 -->
+	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg ref="sqlSessionFactoryBean"></constructor-arg>
+	</bean>
+
+</beans>

@@ -1,0 +1,23 @@
+button, input[type='submit'], input[type='reset'] {
+    padding: 0;
+    border: 0 none;
+    background-color: transparent;
+    vertical-align: middle;
+}
+.hidden {
+    font: 0/0 a;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    zoom: 1;
+}
+strong {
+    font-weight: 500;
+}
+button, input[type='submit'], input[type='button'] {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
