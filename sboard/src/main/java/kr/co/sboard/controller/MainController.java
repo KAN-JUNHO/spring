@@ -9,9 +9,10 @@ import kr.co.sboard.vo.MemberVO;
 
 @Controller
 public class MainController {
+
 	
-	@GetMapping(value= {"/","/index"})
-	public String index(HttpSession session){
+	@GetMapping(value= {"/", "/index"})
+	public String index(HttpSession session) {
 		
 		MemberVO member = (MemberVO) session.getAttribute("member");
 		
@@ -23,6 +24,7 @@ public class MainController {
 			return "/list";
 		}
 		
-	}
 		
+	}
+	
 }

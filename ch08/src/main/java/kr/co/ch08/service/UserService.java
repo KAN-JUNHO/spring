@@ -9,28 +9,32 @@ import kr.co.ch08.dao.UserDAO;
 import kr.co.ch08.vo.UserVO;
 
 
-
 @Service
 public class UserService {
-	
+
 	@Autowired
 	private UserDAO dao;
 	
+	
 	public void insertUser(UserVO vo) {
-		
+		dao.insertUser(vo);
 	}
+	
 	public List<UserVO> selectUsers() {
 		return dao.selectUsers();
 	}
+	
 	public UserVO selectUser(String uid) {
 		return dao.selectUser(uid);
 	}
-
+	
 	public void updateUser(UserVO vo) {
 		dao.updateUser(vo);
 	}
-
+	
 	public void deleteUser(String uid) {
 		dao.deleteUser(uid);
 	}
+	
+			
 }

@@ -1,13 +1,20 @@
 package kr.co.sboard.service;
+
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import kr.co.sboard.dao.BoardDao;
 import kr.co.sboard.vo.BoardArticleVo;
+
 @Service
 public class BoardService {
+
 	@Autowired
 	private BoardDao dao;
+
+
 	// 전체 게시물 갯수
 	public int getTotalArticle() {
 		return dao.getTotalArticle();
@@ -54,11 +61,11 @@ public class BoardService {
 	public List<BoardArticleVo> selectArticles(int start) {
 		return dao.selectArticles(start);
 	}
-
+	
 	public void updateArticle(BoardArticleVo vo) {
 		dao.updateArticle(vo);
 	}
-
+	
 	public void deleteArticle(int seq) {
 		dao.deleteArticle(seq);
 	}

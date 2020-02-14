@@ -5,12 +5,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class MainController {
+
 	
-	@RequestMapping(value={"/","/index"})
-	public String indedx() {
+	@RequestMapping(value= {"/", "/index"})
+	public String index() {
 		return "index";
 	}
-	
+
 	@RequestMapping("/hello")
 	public String hello() {
 		return "hello";
@@ -20,6 +21,5 @@ public class MainController {
 	public String greeting() {
 		return "greeting";
 	}
-	
 	
 }

@@ -14,21 +14,21 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 public class JDBCSelectTest {
 
 	public static void main(String[] args) {
-
+		
 		ApplicationContext ctx = new GenericXmlApplicationContext("spring-context.xml");
-
+		
 		UserDAO dao = (UserDAO) ctx.getBean("userDAO");
-
+		
 		UserVO user = dao.selectUser("A101");
-
+		
 		System.out.println("아이디 : "+user.getUid());
 		System.out.println("이름 : "+user.getName());
 		System.out.println("휴대폰 : "+user.getHp());
 		System.out.println("나이 : "+user.getAge());
 
-
+		
 		List<UserVO> users = dao.selectUsers();
-
+		
 		for(UserVO vo : users) {
 			System.out.println("===================");
 			System.out.println("아이디 : "+vo.getUid());
@@ -37,12 +37,12 @@ public class JDBCSelectTest {
 			System.out.println("나이 : "+vo.getAge());
 			System.out.println("-------------------");
 		}
-
-
+		
+		
 		//List<MemberVO> members = dao.selectMembers();
-
+				
 		List<Map<String, Object>> members = dao.selectMembersMap();
-
+		
 		for( Map<String, Object> map  : members ) {		
 			System.out.println("========= MEMBER =========");
 			System.out.println("아이디 : "+map.get("uid"));
@@ -53,7 +53,7 @@ public class JDBCSelectTest {
 			System.out.println("입사일 : "+map.get("rdate"));
 			System.out.println("-------------------");
 		}
-
-
+		
+		
 	}
 }

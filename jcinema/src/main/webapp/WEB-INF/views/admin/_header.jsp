@@ -11,12 +11,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="/jcinema/admin/js/sideMenu.js"></script>
-
 </head>
 <body>
     <div id="wrapper-admin">
         <header>
             <div class="container">
-                <a class="logo" href="/jcinema/admin/index.html"><img src="/jcinema/admin/img/admin_logo.png" alt=""></a>
+                <a class="logo" href="/jcinema/admin"><img src="/jcinema/admin/img/admin_logo.png" alt=""></a>
             </div>
         </header>

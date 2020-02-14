@@ -5,7 +5,8 @@ public class UserVO {
 	private String uid;
 	private String name;
 	private String hp;
-	private int age;
+	private int    age;
+
 	public String getUid() {
 		return uid;
 	}
@@ -30,6 +31,5 @@ public class UserVO {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
-	
+
 }

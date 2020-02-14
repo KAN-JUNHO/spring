@@ -1,7 +1,7 @@
 package kr.co.ch08.vo;
 
 public class UserVO {
-	
+
 	private String uid;
 	private String name;
 	private String hp;

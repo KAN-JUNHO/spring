@@ -10,17 +10,17 @@ import kr.co.ch07.vo.UserVO;
 
 @Service
 public class UserService {
-	
+
 	@Autowired
 	private UserDAO dao;
 	
 	public void insertUser(UserVO vo) {
 		dao.insertUser(vo);
 	}
+	
 	public List<UserVO> selectUsers() {
 		return dao.selectUsers();
 	}
 	
-	
-	
+			
 }

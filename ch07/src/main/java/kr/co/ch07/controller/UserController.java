@@ -2,6 +2,8 @@ package kr.co.ch07.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,29 +14,33 @@ import kr.co.ch07.vo.UserVO;
 
 @Controller
 public class UserController {
-	
+
 	@Autowired
 	private UserService service;
+	
 	
 	@RequestMapping("/user/form")
 	public String form() {
 		return "/user/form";
 	}
+	
 	@RequestMapping("/user/list")
 	public String list(Model model) {
 		
 		List<UserVO> users = service.selectUsers();
 		
-		model.addAttribute("users",users);
+		model.addAttribute("users", users);	
+		
 		
 		return "/user/list";
 	}
+		
 	@RequestMapping("/user/register")
 	public String register(UserVO vo) {
 		
 		service.insertUser(vo);
 		
 		return "redirect:/user/list";
-		
 	}
+	
 }

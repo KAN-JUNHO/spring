@@ -14,20 +14,22 @@ public class BoardArticleVo {
 	private String regip;
 	private String rdate;
 	
-	
-	//추가 메서드
+	// 추가필드
 	private String subject;
 	private String nick;
 	
 	public String getSubject() {
 		return subject;
 	}
+	
 	public void setSubject(String subject) {
 		this.subject = subject;
 	}
+	
 	public String getNick() {
 		return nick;
 	}
+	
 	public void setNick(String nick) {
 		this.nick = nick;
 	}
@@ -98,7 +100,6 @@ public class BoardArticleVo {
 	}
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
-	}	
-
+	}
 	
 }

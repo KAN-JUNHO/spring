@@ -8,15 +8,20 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class AfterAdvice {
-	
-	@Pointcut("execution(* kr.co.ch05.sub2.*Service.insert(..))")
+
+	@Pointcut("execution(void kr.co.ch05.sub2.*Service.insert())")
 	public void insertPointcut() {}
 	
-	@After("insertPointcut")
+	@Pointcut("execution(* kr.co.ch05.sub2.BoardService.select(..))")
+	public void selectPointcut() {}
+	
+	
+	@After("insertPointcut()")
 	public void after1() {
 		System.out.println("È¾´Ü°ü½É - after1...");
 	}
 	
+	@After("selectPointcut()")
 	public void after2() {
 		System.out.println("È¾´Ü°ü½É - after2...");
 	}

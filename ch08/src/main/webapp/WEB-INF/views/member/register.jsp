@@ -6,36 +6,52 @@
 	<title>register</title>
 </head>
 <body>
-	<h3>USER 등록</h3>
+	<h3>Member 등록</h3>
 	
 	<form action="/ch08/member/register" method="post">
 		<table border="1">
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name="uid"></td>
+				<td><input type="text" name="uid" /></td>			
 			</tr>
 			<tr>
 				<td>이름</td>
-				<td><input type="text" name="name"></td>
+				<td><input type="text" name="name" /></td>			
 			</tr>
 			<tr>
 				<td>휴대폰</td>
-				<td><input type="text" name=hp></td>
+				<td><input type="text" name="hp" /></td>			
 			</tr>
 			<tr>
 				<td>직급</td>
-				<td><input type="text" name="pos"></td>
+				<td>
+					<select name="pos">
+						<option>사원</option>
+						<option>대리</option>
+						<option>과장</option>
+						<option>차장</option>
+						<option>부장</option>					
+					</select>
+				</td>			
 			</tr>
 			<tr>
-				<td>부서번호</td>
-				<td><input type="text" name="dep"></td>
-			</tr>
-			
+				<td>부서</td>
+				<td>
+					<select name="dep">
+						<option>101</option>
+						<option>102</option>
+						<option>103</option>
+						<option>104</option>
+						<option>105</option>
+					</select>
+				</td>			
+			</tr>			
 			<tr>
-				<td colspan="2" align="right"><input type="submit" value="등록하기"></td>
+				<td colspan="2" align="right"><input type="submit" value="등록하기"/></td>			
 			</tr>
 		</table>
 	</form>
-		<a href="/ch08/member/list">직원목록</a>
+	
+	<a href="/ch08/member/list">직원목록</a>
 </body>
 </html>

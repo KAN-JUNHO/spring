@@ -7,8 +7,6 @@ public class AfterThrowAdvice {
 
 	public void afterThrow1() {
 		System.out.println("È¾´Ü°ü½É - afterThrow1...");
-		
-		
 	}
 	
 	public void afterThrow2() {

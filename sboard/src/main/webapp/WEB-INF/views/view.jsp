@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -42,23 +42,23 @@
 						<a href="/sboard/list" class="cancel">목록</a>
 					</div>
 				</form>
-			</div>
-			<!-- view 끝 -->
+			</div><!-- view 끝 -->
 			
 			<!-- 댓글리스트 -->
 			<section class="comments">
 				<h3>댓글목록</h3>
 				
+				
 				<c:forEach var="vo" items="${comments}">
 					<div class="comment">
 						<span>
-							<span>${vo.uid }</span>
-							<span>vo.rdate.substring(2,10)</span>
+							<span>${vo.uid}</span>
+							<span>${vo.rdate.substring(2, 10)}</span>
 						</span>
-						<textarea>테스트 ${vo.content}</textarea>
+						<textarea>${vo.content}</textarea>
 						<div>
 							<a href="#" class="del">삭제</a>
-							<a href="" class="mod">수정</a>
+							<a href="#" class="mod">수정</a>
 						</div>
 					</div>
 				</c:forEach>

@@ -115,9 +115,8 @@
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>   
-
-
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 		<dependency>
 		    <groupId>org.aspectj</groupId>
@@ -145,7 +144,8 @@
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-dbcp2</artifactId>
 		    <version>2.7.0</version>
-		</dependency>     
+		</dependency>
+		
 		
 	</dependencies>
     <build>

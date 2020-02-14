@@ -3,31 +3,31 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>register</title>
+	<title>modify</title>
 </head>
 <body>
-	<h3>수정</h3>
+	<h3>USER 수정</h3>
 	
 	<form action="/ch08/user/modify" method="post">
 		<table border="1">
 			<tr>
 				<td>아이디</td>
-				<td><input type="text" name="uid" readonly="readonly" value="${user.uid}"></td>
+				<td><input type="text" name="uid" readonly="readonly" value="${user.uid}" /></td>			
 			</tr>
 			<tr>
 				<td>이름</td>
-				<td><input type="text" name="name" value="${user.name}"></td>
+				<td><input type="text" name="name" value="${user.name}"/></td>			
 			</tr>
 			<tr>
 				<td>휴대폰</td>
-				<td><input type="text" name=hp value="${user.hp}"></td>
+				<td><input type="text" name="hp" value="${user.hp}"/></td>			
 			</tr>
 			<tr>
 				<td>나이</td>
-				<td><input type="text" name="age" value="${user.age}"></td>
+				<td><input type="text" name="age" value="${user.age}"/></td>			
 			</tr>
 			<tr>
-				<td colspan="2" align="right"><input type="submit" value="수정하기"></td>
+				<td colspan="2" align="right"><input type="submit" value="수정하기"/></td>			
 			</tr>
 		</table>
 	</form>

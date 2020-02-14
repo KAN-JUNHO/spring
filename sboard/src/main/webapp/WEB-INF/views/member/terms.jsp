@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<title>회원약관</title>
-		<link rel="stylesheet" href="/resource/css/style.css" />		
+		<link rel="stylesheet" href="/sboard/css/style.css" />		
 	</head>
 
 	<body>

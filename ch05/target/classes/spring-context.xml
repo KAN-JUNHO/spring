@@ -11,9 +11,10 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
-	<context:component-scan base-package="kr.co.ch05.sub1"></context:component-scan>
-
-	<!-- 어노테이션 AOP 작업처리를 위한 태그선언 -->
-	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	<context:component-scan base-package="kr.co.ch05"></context:component-scan>
 	
+	<!-- 어노테이션 AOP 작업처리를 위한 태그선언 -->
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>	
+
+
 </beans>

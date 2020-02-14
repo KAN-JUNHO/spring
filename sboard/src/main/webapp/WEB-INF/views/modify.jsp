@@ -23,7 +23,7 @@
 								<textarea name="content" rows="20" required>${article.content}</textarea>
 							</td>
 						</tr>
-
+						
 					</table>
 					<div class="btns">
 						<a href="#" class="cancel">취소</a>
@@ -34,3 +34,5 @@
 		</div>
 	</body>
 </html>
+
+

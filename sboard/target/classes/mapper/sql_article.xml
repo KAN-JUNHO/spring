@@ -23,32 +23,34 @@
 		ORDER BY `seq` DESC
 		LIMIT #{start}, 10;	
 	</select>
-	
+
 	<select id="SELECT_TOTAL_ARTICLES" resultType="int">
 		SELECT COUNT(*) FROM `BOARD_ARTICLE` WHERE `parent`=0;
 	</select>
 	
 	<update id="UPDATE_ARTICLE">
 		UPDATE `BOARD_ARTICLE` SET
+		
 		`title`=#{subject},
 		`content`=#{content}
-
-		WHERE `seq`=#{seq};	
+		
+		WHERE `seq`=#{seq};		
 	</update>
 	
 	
-	<insert id="INSERT_COMMENT">
+	<insert id="INSERT_COMMENT">		
 		INSERT INTO `BOARD_ARTICLE` SET 
 		`parent`=#{parent},
 		`content`=#{content},
-		`uid` = #{uid},
-		`regip`= #{regip},
-		`rdate`= NOW();
-		
+		`uid`=#{uid},
+		`regip`=#{regip},
+		`rdate`=NOW();
 	</insert>
 	
 	<select id="SELECT_COMMENT" resultType="kr.co.sboard.vo.BoardArticleVo">
 		SELECT * FROM `BOARD_ARTICLE` WHERE `parent`=#{parent} ORDER BY `seq` ASC;	
 	</select>
-
+	
+	
+	
 </mapper>

@@ -36,19 +36,24 @@ public class BoardDao {
 	}
 	
 	public void updateArticle(BoardArticleVo vo) {
+		
 		mybatis.update("mapper.sql_article.UPDATE_ARTICLE", vo);
+		
 	}
 	
 	public void deleteArticle(int seq) {}
-
+	
+	
 	public void insertComment(BoardArticleVo vo) {
 		mybatis.insert("mapper.sql_article.INSERT_COMMENT", vo);		
 	}
 	
 	public List<BoardArticleVo> selectComment(int parent) {
-		return mybatis.selectList("mapper.sql_article.SELECT_COMMENT",parent);
+		return mybatis.selectList("mapper.sql_article.SELECT_COMMENT", parent);
 	}
+	
 	public void updateComment(BoardArticleVo vo) {}
+	
 	public void deleteComment(int seq) {}
 	
 	

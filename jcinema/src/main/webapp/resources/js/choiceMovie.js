@@ -34,12 +34,16 @@ $(document).ready(function(){
 		var schedule_date = $('input[name=movie_date]').val();
 		
 		
-		var url = "/jcinema/api/movies?theater_no="+theater_no+"&schedule_date="+schedule_date;  
+		var url = "/jcinema/api/schedule/movies?theater_no="+theater_no+"&schedule_date="+schedule_date;  
 		var movie_list = $('.rank > article > ul');
+		
+		
 		
 		movie_list.empty();
 					
 		$.get(url, function(data){
+
+			var data = JSON.parse(data);
 			
 			$.each(data, function(i, value){
 				
@@ -82,14 +86,16 @@ $(document).ready(function(){
 		var showtime_section_div = $('.showtime > article > section > div');
 		var showtime_nodata  = $('.showtime .nodata');
 		
-		var url = "/jcinema/api/movies-schedule";
+		var url = "/jcinema/api/movie-roundview";
 		                   
 		var param = {"schedule_date": schedule_date, 
-					 "theater_no": schedule_theater_no, 
-					 "movie_no": movie_no}; 
+					 "schedule_theater_no": schedule_theater_no, 
+					 "schedule_movie_no": movie_no}; 
 		
 		
 		$.get(url, param, function(data){
+			
+			var data = JSON.parse(data);
 			
 			if(data.length > 0){
 				
@@ -130,7 +136,7 @@ $(document).ready(function(){
 		var movie_no   = $(this).attr('data-movie-no');
 		var round_view = $(this).attr('data-round-view');
 		
-		location.href = '/jcinema/ticketing/choice-seat?theater_no='+theater_no+'&screen_no='+screen_no+'&movie_date='+movie_date+'&movie_no='+movie_no+'&round_view='+round_view;
+		location.href = '/jcinema/ticketing/choice-seat?seat_theater_no='+theater_no+'&seat_screen_no='+screen_no+'&ticket_movie_date='+movie_date+'&ticket_movie_no='+movie_no+'&ticket_round_view='+round_view;
 	});
 	
 	
@@ -144,7 +150,7 @@ $(document).ready(function(){
 			
 			$.each(data, function(k, values){
 				
-				//console.log(k+' : '+v);
+				
 				if(k == '서울'){
 					
 					$.each(values, function(i, data){							

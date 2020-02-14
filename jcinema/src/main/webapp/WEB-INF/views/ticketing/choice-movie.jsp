@@ -11,6 +11,10 @@
             <a class="side-banner right" href="#"><img src="/jcinema/img/ticketing_side_banner_event.png" alt=""></a> 
             
             <div class="calendar">
+            
+            	<input type="text" name="movie_date" />
+            	<input type="text" name="theater_no" />
+            	<input type="text" name="movie_no" />
                 
                 <nav>
                     <span class="month">11</span>
@@ -101,38 +105,7 @@
                         </p>
                     </div>
                     <article>
-                        <ul>                                    
-                            <li>
-                                <a href="#">                                            
-                                    <span class="grade gradeAll">all</span>
-                                    <span class="tit">겨울왕국2</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">                                            
-                                    <span class="grade grade12">12</span>
-                                    <span class="tit">겨울왕국2</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">                                            
-                                    <span class="grade grade15">15</span>
-                                    <span class="tit">겨울왕국2</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">                                            
-                                    <span class="grade grade18">18</span>
-                                    <span class="tit">겨울왕국2</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">                                            
-                                    <span class="grade grade19">19</span>
-                                    <span class="tit">겨울왕국2</span>
-                                </a>
-                            </li>
-                        </ul>
+                        <ul></ul>
                     </article>
                 </div>
             </section>
@@ -155,89 +128,7 @@
                 <p class="nodata">상여시간이 조회되지 않았습니다. </p>
 
                 <div>
-                    <h3>                                
-                        <span class="grade grade12">12</span><em>백두산</em>
-                        <span>오투(부산대) 1관</span>
-                    </h3>
-                    <ul class="round_view">
-                        <li>
-                            <a href="#">
-                                <span>1회차</span>
-                                <span>09:00 ~ 11:00</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>2회차</span>
-                                <span>11:10 ~ 13:10</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>3회차</span>
-                                <span>13:20 ~ 15:20</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>4회차</span>
-                                <span>15:30 ~ 17:30</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>5회차</span>
-                                <span>17:40 ~ 19:40</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                    </ul>
-
-                    <h3>                                
-                        <span class="grade grade12">12</span><em>백두산</em>
-                        <span>오투(부산대) 2관</span>
-                    </h3>
-                    <ul class="round_view">
-                        <li>
-                            <a href="#">
-                                <span>1회차</span>
-                                <span>09:00 ~ 11:00</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>2회차</span>
-                                <span>11:10 ~ 13:10</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>3회차</span>
-                                <span>13:20 ~ 15:20</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>4회차</span>
-                                <span>15:30 ~ 17:30</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                        <li>
-                            <a href="#">
-                                <span>5회차</span>
-                                <span>17:40 ~ 19:40</span>
-                                <span><em>24</em>석/<em>80</em>석</span>
-                            </a>                	
-                        </li>                            
-                    </ul>
+                    
                 </div>
 
             </section>               

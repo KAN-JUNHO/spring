@@ -14,6 +14,7 @@ public class MemberService {
 	@Autowired
 	private MemberDAO dao;
 	
+	
 	public void insertMember(MemberVO vo) {
 		dao.insertMember(vo);
 	}
@@ -24,14 +25,12 @@ public class MemberService {
 	
 	public List<MemberVO> selectMembers() {
 		return dao.selectMembers();
-	}	
+	}
 	
-
-
 	public void updateMember(MemberVO vo) {
 		dao.updateMember(vo);
 	}
-
+	
 	public void deleteMember(String uid) {
 		dao.deleteMember(uid);
 	}

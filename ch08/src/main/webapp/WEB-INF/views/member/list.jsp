@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h3>Member 목록</h3>
-
+	
 	<table border="1">
 		<tr>
 			<th>아이디</th>
@@ -19,7 +19,7 @@
 			<th>입사일</th>
 			<th>설정</th>		
 		</tr>
-
+		
 		<c:forEach var="member" items="${members}">
 			<tr>
 				<td>${member.uid}</td>
@@ -34,10 +34,10 @@
 				</td>
 			</tr>
 		</c:forEach>
-
+		
 	</table>
-
+		
 	<a href="/ch08/member/register">등록하기</a>		
 
 </body>
-</html> 
+</html>

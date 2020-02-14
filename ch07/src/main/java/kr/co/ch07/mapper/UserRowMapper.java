@@ -18,9 +18,8 @@ public class UserRowMapper implements RowMapper<UserVO>{
 		vo.setName(rs.getString(2));
 		vo.setHp(rs.getString(3));
 		vo.setAge(rs.getInt(4));
-		
+				
 		return vo;
 	}
-	
-	
+
 }

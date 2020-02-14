@@ -8,7 +8,7 @@ public class MemberVO {
 	private String pos;
 	private int dep;
 	private String rdate;
-
+	
 	public String getUid() {
 		return uid;
 	}
@@ -45,7 +45,7 @@ public class MemberVO {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
-
-
-
+	
+	
+	
 }

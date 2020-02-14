@@ -77,6 +77,7 @@ public class BoardController {
 		
 		List<BoardArticleVo> comments = service.selectComment(seq);
 		
+
 		model.addAttribute(article);
 		model.addAttribute("comments", comments);
 		
@@ -95,13 +96,16 @@ public class BoardController {
 		return mav;
 	}
 	
+	
 	@PostMapping("/modify")
 	public String modify(BoardArticleVo vo) {
 		
-		service.updateArticle(vo);
+		service.updateArticle(vo);		
 		
 		return "redirect:/view?seq="+vo.getSeq();
 	}
+	
+	
 	
 	@PostMapping("/comment/write")
 	public String commentWrite(HttpServletRequest req, int parent, String comment) {

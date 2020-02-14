@@ -66,6 +66,10 @@ $(document).ready(function(){
         
         $a.parent().removeClass('on');
         $(this).parent().addClass('on');
+        
+        // 날짜입력 필드에 선택한 날짜 입력        
+        var today = $(this).children().eq(1).text();
+        $('input[name=movie_date]').val(year+'-'+(month+1)+"-"+today);
 
     });
 

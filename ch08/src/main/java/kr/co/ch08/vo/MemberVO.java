@@ -1,14 +1,13 @@
 package kr.co.ch08.vo;
 
 public class MemberVO {
-	
+
 	private String uid;
 	private String name;
 	private String hp;
 	private String pos;
 	private String dep;
 	private String rdate;
-	
 	public String getUid() {
 		return uid;
 	}
@@ -45,6 +44,8 @@ public class MemberVO {
 	public void setRdate(String rdate) {
 		this.rdate = rdate;
 	}
+
+	
+	
+	
 }
-	
-	

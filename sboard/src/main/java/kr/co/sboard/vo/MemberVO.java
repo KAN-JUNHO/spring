@@ -1,7 +1,7 @@
 package kr.co.sboard.vo;
 
 public class MemberVO {
-	
+
 	private String uid;
 	private String pass1;
 	private String pass2;
@@ -15,6 +15,7 @@ public class MemberVO {
 	private String addr2;
 	private String regip;
 	private String rdate;
+	
 	public String getUid() {
 		return uid;
 	}

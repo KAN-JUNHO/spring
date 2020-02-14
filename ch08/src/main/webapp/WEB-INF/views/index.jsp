@@ -3,11 +3,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>index</title>
 </head>
 <body>
-	<h3>My batis 실습</h3>
-	<a href="/ch08/member/list">list</a>
-	<a href="/ch08/member/register">register</a>
+	<h3>Mybatis 실습하기</h3>
+	
+	<a href="/ch08/user/register">USER 등록</a>
+	<a href="/ch08/user/list">USER 목록</a>
+	
+	
+
 </body>
 </html>

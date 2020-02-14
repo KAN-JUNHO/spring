@@ -8,9 +8,9 @@
 <body>
 	<h1>Spring MVC 실습하기</h1>
 	
-	<a href = "/ch07/hello">hello</a>
-	<a href = "/ch07/greeting">greeting</a>
-	<a href = "/ch07/user/form">user form 페이지</a>
-	<a href = "/ch07/user/list">user list 페이지</a>
+	<a href="/ch07/hello">hello</a>
+	<a href="/ch07/greeting">greeting</a>
+	<a href="/ch07/user/form">user form 페이지</a>
+	<a href="/ch07/user/list">user list 페이지</a>
 </body>
 </html>
