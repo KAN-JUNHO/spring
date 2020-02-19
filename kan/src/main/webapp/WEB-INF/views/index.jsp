@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko"><head>
     
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -396,8 +397,12 @@
                         <li><a href="/discount/" class="frugal"><span>알뜰한 영화관람법!</span></a></li> <!-- 할인카드 -->
                     </ul>
                     <ul class="gnb">
-                    
-						<li><a href="/user/login/?${member.id}" class="login"><span>로그인</span></a></li>
+                    	<c:if test="${member==null}">
+						<li><a href="/user/login/" class="login"><span>로그인</span></a></li>
+						</c:if>
+						<c:if test="${member!=null}">
+							<li><a href="/user/logout/" class="logout"><span>로그아웃</span></a></li>
+						</c:if>
                         <li><a href="/user/join/" class="join"><span>회원가입</span></a></li>
                         <li><a href="/user/mycgv/" class="mycgv required-login" data-url="/user/mycgv/"><span>MY CGV</span></a></li>
                         <li><a href="/user/vip-lounge/" class="vip"><span>VIP LOUNGE</span></a></li>
