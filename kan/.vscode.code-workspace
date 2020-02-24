@@ -1,0 +1,39 @@
+{
+	"folders": [
+		{
+			"name": "Ticket",
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\WEB-INF\\views\\Ticket"
+		},
+		{
+			"name": "KAN",
+			"path": "."
+		},
+		{
+			"name": "user",
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\WEB-INF\\views\\user"
+		},
+		{
+			"name": "js",
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\WEB-INF\\views\\js"
+		},
+		{
+			"name": "Reservation",
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\WEB-INF\\views\\Reservation"
+		},
+		{
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\resources\\css"
+		},
+		{
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\resources\\Front"
+		},
+		{
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\resources\\images"
+		},
+		{
+			"path": "C:\\Users\\java\\Desktop\\workspace\\spring\\kan\\src\\main\\webapp\\resources\\js"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "KAN"
+	}
+}
