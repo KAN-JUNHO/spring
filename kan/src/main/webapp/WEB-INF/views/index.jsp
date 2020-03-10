@@ -401,12 +401,12 @@
 							<li><a href="/kan/user/login/" class="login"><span>로그인</span></a></li>
 						</c:if>
 						<c:if test="${member!=null}">
-							<li><a href="/kan/" class="logout"><span>로그아웃</span></a></li>
+							<li><a href="logout" class="logout"><span>로그아웃</span></a></li>
 						</c:if>
-                        <li><a href="/user/join/" class="join"><span>회원가입</span></a></li>
-                        <li><a href="/user/mycgv/" class="mycgv required-login" data-url="/user/mycgv/"><span>MY CGV</span></a></li>
-                        <li><a href="/user/vip-lounge/" class="vip"><span>VIP LOUNGE</span></a></li>
-                        <li><a href="/user/memberShip/ClubService.aspx" title="새창" class="club specialclub"><span>CLUB 서비스</span></a></li>
+                        <li><a href="/kan/user/register/" class="join"><span>회원가입</span></a></li>
+                        <li><a href="/kan/user/register/" class="mycgv required-login" data-url="/user/register/"><span>MY CGV</span></a></li>
+                        <li><a href="/kan/user/vip-lounge/" class="vip"><span>VIP LOUNGE</span></a></li>
+                        <li><a href="/kan/user/memberShip/ClubService.aspx" title="새창" class="club specialclub"><span>CLUB 서비스</span></a></li>
                         <!-- 2014.12.8 리뉴얼-->
                         <li><a href="/support/default.aspx" class="customer"><span>고객센터</span></a></li>
                         <!-- 2014.12.8 리뉴얼-->

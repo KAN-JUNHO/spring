@@ -8,7 +8,7 @@
 <body>
 	<h3>USER 등록</h3>
 	
-	<form action="register" method="post">
+	<form action="/kan/user/login" method="post">
 		<table border="1">
 			<tr>
 				<td>아이디</td>

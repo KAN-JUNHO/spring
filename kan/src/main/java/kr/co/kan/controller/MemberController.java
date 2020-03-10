@@ -68,7 +68,8 @@ public class MemberController {
 		return "redirect:/";
 	}
 	
-	@GetMapping("/logout")
+	//03.로그아웃처리
+	@GetMapping("logout")
 	public String logout(HttpSession session) throws Exception{
 		
 		session.invalidate();
